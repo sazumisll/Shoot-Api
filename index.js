@@ -203,6 +203,10 @@ app.get('/api/ceritahoror', async (req, res) => {
 
 
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Server is running on port 3000');
-});
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+
+async function handleRequest(request) {
+  return app(request)
+}
