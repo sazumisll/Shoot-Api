@@ -14,7 +14,7 @@ const getOpenaiData = async (text) => {
     }, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer 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`
+        'Authorization': `Bearer API_HERE`
       }
     });
 
